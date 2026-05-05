@@ -5,7 +5,7 @@ describe('Teste do cálculo do INSS', () => {
         const valorEsperado = 0;
         const salarioBruto = -1000.00;
         
-        const res = await calcularINSSProgressivo(salarioBruto);
+        const res = calcularINSSProgressivo(salarioBruto);
         expect(res).toEqual(valorEsperado)
     })
 
@@ -13,7 +13,7 @@ describe('Teste do cálculo do INSS', () => {
         const valorEsperado = 0;
         const salarioBruto = 0; 
 
-        const res = await calcularINSSProgressivo(salarioBruto);
+        const res = calcularINSSProgressivo(salarioBruto);
         expect(res).toEqual(valorEsperado)
     })
 
@@ -21,7 +21,7 @@ describe('Teste do cálculo do INSS', () => {
         const valorEsperado = 248.6;
         const salarioBruto = 3000;
 
-        const res = await calcularINSSProgressivo(salarioBruto);
+        const res = calcularINSSProgressivo(salarioBruto);
         expect(res).toBe(valorEsperado);
     })
 })
