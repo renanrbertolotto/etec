@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="1" errors="0" time="0.284">
+  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-05T17:13:41" time="0.141" tests="1">
+    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="1" skipped="0" timestamp="2026-05-05T17:13:42" time="0.078" tests="1">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" time="0">
+      <failure>Error: Meses trabalhados deve ser entre 1 e 12
+    at calcularDecimoTerceiro (/Users/vimanzanovd/dev/etec/api/src/services/decimoTerceiroService.js:6:11)
+    at Object.calcularDecimoTerceiro (/Users/vimanzanovd/dev/etec/api/tests/services/decimoTerceiroService.test.js:8:16)
+    at Promise.finally.completed (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1557:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1497:10)
+    at _callCircusTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1007:40)
+    at _runTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:947:3)
+    at /Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:849:7
+    at _runTestsForDescribeBlock (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:862:11)
+    at _runTestsForDescribeBlock (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:857:11)
+    at run (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:761:3)
+    at runAndTransformResultsToJestFormat (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1918:21)
+    at jestAdapter (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/runner.js:101:19)
+    at runTestInternal (/Users/vimanzanovd/dev/etec/api/node_modules/jest-runner/build/index.js:275:16)
+    at runTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-runner/build/index.js:343:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
