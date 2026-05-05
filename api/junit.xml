@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="7" failures="1" errors="0" time="0.312">
-  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="1" skipped="0" timestamp="2026-05-05T18:06:55" time="0.181" tests="3">
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" time="0.003">
+<testsuites name="jest tests" tests="7" failures="0" errors="0" time="0.282">
+  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:20:50" time="0.12" tests="3">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" time="0.004">
     </testcase>
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" time="0">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" time="0.001">
     </testcase>
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 1" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 1" time="0.001">
-      <failure>Error: expect(received).toThrow(expected)
-
-Expected substring: &quot;Meses trabalhados deve ser entre 1 e 12&quot;
-
-Received function did not throw
-    at Object.toThrow (/Users/vimanzanovd/dev/etec/api/tests/services/decimoTerceiroService.test.js:18:60)
-    at Promise.finally.completed (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1557:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1497:10)
-    at _callCircusTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1007:40)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at _runTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:947:3)
-    at /Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:849:7
-    at _runTestsForDescribeBlock (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:862:11)
-    at _runTestsForDescribeBlock (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:857:11)
-    at run (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:761:3)
-    at runAndTransformResultsToJestFormat (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/jestAdapterInit.js:1918:21)
-    at jestAdapter (/Users/vimanzanovd/dev/etec/api/node_modules/jest-circus/build/runner.js:101:19)
-    at runTestInternal (/Users/vimanzanovd/dev/etec/api/node_modules/jest-runner/build/index.js:275:16)
-    at runTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-runner/build/index.js:343:7)</failure>
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:06:55" time="0.013" tests="3">
-    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0.001">
+  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:20:50" time="0.092" tests="1">
+    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:20:50" time="0.012" tests="3">
+    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0">
     </testcase>
     <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" time="0">
     </testcase>
-    <testcase classname="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" name="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:06:55" time="0.05" tests="1">
-    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.01">
+    <testcase classname="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" name="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
