@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="1" errors="0" time="0.367">
-  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="1" skipped="0" timestamp="2026-05-05T17:49:09" time="0.192" tests="3">
+<testsuites name="jest tests" tests="7" failures="1" errors="0" time="0.312">
+  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="1" skipped="0" timestamp="2026-05-05T18:06:55" time="0.181" tests="3">
     <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês igual -1" time="0.003">
     </testcase>
     <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" time="0">
@@ -28,12 +28,16 @@ Received function did not throw
     at runTest (/Users/vimanzanovd/dev/etec/api/node_modules/jest-runner/build/index.js:343:7)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-05T17:49:10" time="0.103" tests="1">
-    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.01">
+  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:06:55" time="0.013" tests="3">
+    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0.001">
+    </testcase>
+    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" name="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-05T17:49:10" time="0.014" tests="1">
-    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0">
+  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-05T18:06:55" time="0.05" tests="1">
+    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.01">
     </testcase>
   </testsuite>
 </testsuites>
