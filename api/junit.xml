@@ -1,44 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="20" failures="0" errors="0" time="0.35">
-  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:45" time="0.199" tests="1">
-    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.01">
+<testsuites name="jest tests" tests="25" failures="0" errors="0" time="0.342">
+  <testsuite name="Teste do endpoint de cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.193" tests="6">
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" time="0.013">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for nulo" time="0.002">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto e meses tralhados for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto e meses tralhados for nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que 1" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que 1" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for maior que 12" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for maior que 12" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 200 quando salário bruto e meses trabalhados for um valor válido" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 200 quando salário bruto e meses trabalhados for um valor válido" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do endpoint de cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.024" tests="1">
-    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" time="0">
+  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.024" tests="1">
+    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do cálculo do salário" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.014" tests="4">
-    <testcase classname="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" name="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" time="0.004">
+  <testsuite name="Teste do cálculo do salário" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.014" tests="4">
+    <testcase classname="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" name="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" time="0.003">
     </testcase>
-    <testcase classname="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" name="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" time="0">
+    <testcase classname="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" name="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" time="0.001">
     </testcase>
-    <testcase classname="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" name="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" time="0.001">
+    <testcase classname="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" name="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" time="0">
     </testcase>
     <testcase classname="Teste do cálculo do salário Deve calcular corretamente um salário acima do teto das faixas do INSS" name="Teste do cálculo do salário Deve calcular corretamente um salário acima do teto das faixas do INSS" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do cálculo de rescisão" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.01" tests="4">
-    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" time="0">
-    </testcase>
-    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" time="0">
-    </testcase>
-    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" time="0.001">
-    </testcase>
-    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Teste do cálculo de férias" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.012" tests="4">
-    <testcase classname="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" name="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" time="0.001">
-    </testcase>
-    <testcase classname="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" name="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" time="0">
-    </testcase>
-    <testcase classname="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" name="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" time="0.001">
-    </testcase>
-    <testcase classname="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" name="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.008" tests="3">
+  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.009" tests="3">
     <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0">
     </testcase>
     <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" time="0">
@@ -46,12 +36,32 @@
     <testcase classname="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" name="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-06T11:23:46" time="0.01" tests="3">
+  <testsuite name="Teste do cálculo de férias" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.013" tests="4">
+    <testcase classname="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" name="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" time="0.001">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" name="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" name="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" name="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo de rescisão" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.009" tests="4">
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" time="0.001">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-06T12:11:22" time="0.01" tests="3">
     <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" time="0.002">
     </testcase>
     <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" time="0">
     </testcase>
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" time="0">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
