@@ -3,7 +3,7 @@ const app     = require('../src/app');
 
 describe('Teste para ver se a API está no ar (Health)', () => {
     test('Deve retornar 200 para a chamada', async () => {
-        const res = await request(app).get('/health');
+        const res = await request(app).get('/ETEC/health');
         expect(res.status).toBe(200);
     });
 });

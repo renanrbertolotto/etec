@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/health', healthRoutes);
+app.use('/ETEC/health', healthRoutes);
 app.use('/ETEC/salario', salarioRoutes);
 app.use('/ETEC/ferias', feriasRoutes);
 app.use('/ETEC/decimo-terceiro', decimoRoutes);
