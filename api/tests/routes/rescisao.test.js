@@ -151,5 +151,4 @@ describe('Teste do endpoint de cálculo da rescisão', () => {
         const res = (await request(app).post('/ETEC/rescisao').send(payload));
         expect(res.statusCode).toBe(respostaEsperada.status);
     });
-
 })
