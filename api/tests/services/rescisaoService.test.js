@@ -121,4 +121,17 @@ describe('Teste do cálculo de rescisão', () => {
 
         expect(res).toEqual(valorEsperado);
     })
+
+    test('Não deve apliar regra de comJustaCausa para tipo desconhecido', () => {
+        const salarioBruto = 2200;
+        const dataAdmissao = '2025-09-01';
+        const dataRescisao = '2026-05-10';
+        const tipoRescisao = 'tipoInvalido';
+        const diasTrabalhados = 10;
+
+        const res = calcularRescisao(salarioBruto, dataAdmissao, dataRescisao, tipoRescisao, diasTrabalhados);
+
+        expect(res).not.toHaveProperty('observacaoFGTS');
+        expect(res.totalBruto).toBeUndefined();
+    })
 })
