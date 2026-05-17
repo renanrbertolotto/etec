@@ -1,9 +1,9 @@
-# etec
-API de cálculo de encargos trabalhistas - Empregada Doméstica
+# CalcRH
+API de cálculo de encargos trabalhistas — Empregada Doméstica
 
+## Estrutura do Projeto
 
-Estrutura do Projeto
-
+```
 etec/
 ├── README.md
 ├── api/
@@ -14,12 +14,12 @@ etec/
 │       │   ├── salario.js
 │       │   ├── decimoTerceiro.js
 │       │   ├── ferias.js
-│       │   └── recisao.js
+│       │   └── rescisao.js
 │       ├── services/
 │       │   ├── salarioService.js
 │       │   ├── decimoTerceiroService.js
 │       │   ├── feriasService.js
-│       │   └── recisaoService.js
+│       │   └── rescisaoService.js
 │       ├── app.js
 │       └── server.js
 └── app/
@@ -45,3 +45,44 @@ etec/
                 ├── DecimoScreen.jsx
                 ├── FeriasScreen.jsx
                 └── RecisaoScreen.jsx
+```
+
+## Como Rodar
+
+### API (Terminal 1)
+```bash
+cd etec/api
+npm install
+npm start
+```
+
+### Front (Terminal 2)
+```bash
+cd etec/app
+npm install
+npm run dev
+```
+
+Acesse: http://localhost:5173
+
+## Rotas da API
+
+Base URL: `http://localhost:3000/ETEC`
+
+| Método | Rota             | Descrição              |
+|--------|------------------|------------------------|
+| POST   | /salario         | Cálculo de salário     |
+| POST   | /ferias          | Cálculo de férias      |
+| POST   | /decimo-terceiro | Cálculo do 13° salário |
+| POST   | /rescisao        | Cálculo de rescisão    |
+
+## Tecnologias
+
+- Node.js + Express (API)
+- React + Vite (Front-end)
+
+## Equipe
+
+- Gabriel Adorno Simoso
+- Renan Ribeiro Bertolotto
+- Vitor Manzano Villela Dias

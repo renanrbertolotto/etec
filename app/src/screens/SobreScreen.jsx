@@ -63,7 +63,7 @@ export default function SobreScreen() {
           salário líquido, 13° salário, férias e rescisão contratual conforme a legislação brasileira.
         </p>
         <div style={tags}>
-          {["React", "Node.js", "JavaScript", "CLT"].map(t => (
+          {["React", "Node.js", "JavaScript"].map(t => (
             <span key={t} style={tag}>{t}</span>
           ))}
         </div>
