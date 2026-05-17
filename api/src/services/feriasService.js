@@ -1,6 +1,7 @@
 const { calcularINSSProgressivo } = require('./inssService');
 
 function calcularFerias(salarioBruto, diasDireito = 30, diasConcedidos = 30) {
+  
   // Férias podem ser fracionadas; base é 30 dias = salário completo
   const proporcaoFerias = diasConcedidos / 30;
   const valorFerias = salarioBruto * proporcaoFerias;
