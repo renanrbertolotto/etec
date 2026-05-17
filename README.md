@@ -2,7 +2,6 @@
 API de cálculo de encargos trabalhistas — Empregada Doméstica
 
 ## Estrutura do Projeto
-
 ```
 etec/
 ├── README.md
@@ -45,7 +44,6 @@ etec/
                 ├── DecimoScreen.jsx
                 ├── FeriasScreen.jsx
                 └── RecisaoScreen.jsx
-```
 
 ## Como Rodar
 
@@ -86,3 +84,4 @@ Base URL: `http://localhost:3000/ETEC`
 - Gabriel Adorno Simoso
 - Renan Ribeiro Bertolotto
 - Vitor Manzano Villela Dias
+
