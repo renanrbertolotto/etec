@@ -1,4 +1,4 @@
-# CalcRH
+# ETEC
 API de cálculo de encargos trabalhistas — Empregada Doméstica
 
 ## Estrutura do Projeto
@@ -44,7 +44,8 @@ etec/
                 ├── DecimoScreen.jsx
                 ├── FeriasScreen.jsx
                 └── RecisaoScreen.jsx
-
+                
+```
 ## Como Rodar
 
 ### API (Terminal 1)
