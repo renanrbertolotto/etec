@@ -6,11 +6,27 @@ router.post('/', (req, res) => {
   try {
     const { salarioBruto, diasConcedidos } = req.body;
 
-    if (!salarioBruto) {
-      return res.status(400).json({ erro: 'salarioBruto é obrigatório' });
+    if (salarioBruto === undefined || salarioBruto === null || salarioBruto === '') {
+      return res.status(400).json({ erro: 'Salário Bruto é obrigatório' });
     }
 
-    const resultado = calcularFerias(Number(salarioBruto), 30, Number(diasConcedidos) || 30);
+    const valor = Number(salarioBruto);
+
+    if (isNaN(valor)) {
+      return res.status(400).json({ erro: 'Salário Bruto deve ser um número' });
+    }
+
+    if (valor <= 0) {
+      return res.status(400).json({ erro: 'Salário Bruto deve ser maior que zero' });
+    }
+
+    const dias = diasConcedidos !== undefined ? Number(diasConcedidos) : 30;
+
+    if (isNaN(dias) || dias < 10 || dias > 30) {
+      return res.status(400).json({ erro: 'Dias Concedidos deve ser um número entre 10 e 30 (mínimo legal: 10 dias por período)' });
+    }
+
+    const resultado = calcularFerias(valor, 30, dias);
     res.json(resultado);
   } catch (erro) {
     res.status(400).json({ erro: erro.message });

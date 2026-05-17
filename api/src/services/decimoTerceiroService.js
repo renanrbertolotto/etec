@@ -1,6 +1,7 @@
 const { calcularINSSProgressivo } = require('./inssService');
 
 function calcularDecimoTerceiro(salarioBruto, mesesTrabalhados) {
+  
   // Mês com 15+ dias trabalhados conta como mês completo
   if (mesesTrabalhados < 1 || mesesTrabalhados > 12) {
     throw new Error('Meses trabalhados deve ser entre 1 e 12');
