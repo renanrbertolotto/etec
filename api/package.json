@@ -4,11 +4,16 @@
   "description": "API de cálculo de encargos trabalhistas - Empregada Doméstica",
   "main": "src/server.js",
   "scripts": {
-  "start": "node src/server.js",
-  "dev": "nodemon src/server.js",
-  "test": "jest --coverage"
-},
-  "keywords": ["etec", "doméstica", "encargos", "trabalhista"],
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "etec",
+    "doméstica",
+    "encargos",
+    "trabalhista"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
