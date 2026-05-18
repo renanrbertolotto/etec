@@ -5,7 +5,7 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
     test('Deve retornar 400 quando salário bruto for nulo', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'salarioBruto e mesesTrabalhados são obrigatórios'
+            erro: 'Salário Bruto é obrigatório'
         };
 
         const payload = {
@@ -21,7 +21,7 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
     test('Deve retornar 400 quando meses trabalhados for nulo', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'salarioBruto e mesesTrabalhados são obrigatórios'
+            erro: 'Meses Trabalhados é obrigatório'
         };
 
         const payload = {
@@ -37,7 +37,7 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
     test('Deve retornar 400 quando salário bruto e meses tralhados for nulo', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'salarioBruto e mesesTrabalhados são obrigatórios'
+            erro: 'Salário Bruto é obrigatório'
         };
 
         const payload = {
@@ -53,7 +53,7 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
     test('Deve retornar 400 quando meses trabalhados for menor que 1', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'Meses trabalhados deve ser entre 1 e 12'
+            erro: 'Meses Trabalhados deve ser entre 1 e 12'
         };
 
         const payload = {
@@ -69,7 +69,7 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
     test('Deve retornar 400 quando meses trabalhados for maior que 12', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'Meses trabalhados deve ser entre 1 e 12'
+            erro: 'Meses Trabalhados deve ser entre 1 e 12'
         };
 
         const payload = {
@@ -81,6 +81,22 @@ describe('Teste do endpoint de cálculo do décimo terceiro', () => {
         expect(res.statusCode).toBe(respostaEsperada.status);
         expect(res.body.erro).toStrictEqual(respostaEsperada.erro);
 
+    })
+
+    test('Deve retornar 400 quando meses trabalhados for 0', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Meses Trabalhados deve ser entre 1 e 12'
+        };
+
+        const payload = {
+            salarioBruto: 2000.00,
+            mesesTrabalhados: 0,
+        };
+
+        const res = (await request(app).post('/ETEC/decimo-terceiro').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toStrictEqual(respostaEsperada.erro);
     })
 
     test('Deve retornar 200 quando salário bruto e meses trabalhados for um valor válido', async () => {

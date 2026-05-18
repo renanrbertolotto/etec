@@ -31,16 +31,18 @@ export default function DecimoScreen() {
     <div style={wrap}>
       <PageHeader title="13° Salário" desc="Calcule o valor do décimo terceiro salário proporcional ou integral." />
       <Card>
-        <form onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <form data-testid="decimo-terceiro-form"   onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <Field label="Salário Bruto (R$)">
               <Input
+                data-testid="salario-bruto"
                 type="number" step="0.01" min="0" placeholder="ex: 3500.00"
                 value={bruto} onChange={e => setBruto(e.target.value)}
               />
             </Field>
             <Field label="Meses Trabalhados">
               <Input
+                data-testid="meses-trabalhados"
                 type="number" min="1" max="12" placeholder="1 – 12"
                 value={meses} onChange={e => setMeses(e.target.value)}
               />
@@ -51,8 +53,8 @@ export default function DecimoScreen() {
             São considerados meses completos com ao menos 15 dias trabalhados.
           </div>
 
-          <Button loading={loading} type="submit">Calcular 13°</Button>
-          <ErrBox msg={erro} />
+          <Button data-testid="decimo-terceiro-submit"  loading={loading} type="submit">Calcular 13°</Button>
+          <ErrBox data-testid="decimo-terceiro-erro"  msg={erro} />
           <ResultBox data={result} />
         </form>
       </Card>
