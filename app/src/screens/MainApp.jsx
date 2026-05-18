@@ -29,9 +29,9 @@ export default function MainApp() {
   };
 
   return (
-    <div style={s.wrap}>
+    <div data-testid="main-app" style={s.wrap}>
       {/* SIDEBAR */}
-      <nav style={s.nav}>
+      <nav data-testid="main-nav" style={s.nav}>
         <div style={s.navBrand}>
           <div style={s.navIcon}>🧽</div>
           <span style={s.navTitle}>ETEC</span>
@@ -44,6 +44,7 @@ export default function MainApp() {
               : (
                 <button
                   key={item.id}
+                  data-testid={`nav-${item.id}`}
                   onClick={() => setActive(item.id)}
                   style={{
                     ...s.navBtn,

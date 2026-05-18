@@ -42,6 +42,7 @@ export default function LoginScreen({ onLogin }) {
 
         <div style={s.right}>
           <form
+            data-testid="login-form"
             onSubmit={handleLogin}
             style={{...s.card, animation: shake ? "shake .4s ease" : "slideIn .4s ease"}}
           >
@@ -50,6 +51,7 @@ export default function LoginScreen({ onLogin }) {
 
             <label style={s.label}>Usuário</label>
             <input
+              data-testid="login-user"
               style={s.input}
               type="text"
               placeholder="usuário"
@@ -60,6 +62,7 @@ export default function LoginScreen({ onLogin }) {
 
             <label style={s.label}>Senha</label>
             <input
+              data-testid="login-pass"
               style={s.input}
               type="password"
               placeholder="••••••"
@@ -67,9 +70,9 @@ export default function LoginScreen({ onLogin }) {
               onChange={e => { setPass(e.target.value); setErro(""); }}
             />
 
-            {erro && <p style={s.erro}>{erro}</p>}
+            {erro && <p data-testid="login-error" style={s.erro}>{erro}</p>}
 
-            <button style={s.btn} type="submit">Entrar</button>
+            <button data-testid="login-submit" style={s.btn} type="submit">Entrar</button>
 
             <p style={s.hint}>
               <span style={{color:"var(--muted)"}}>Dica: </span>
