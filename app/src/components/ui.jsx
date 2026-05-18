@@ -115,14 +115,17 @@ export function ResultBox({ data }) {
   );
 }
 
-export function ErrBox({ msg }) {
+export function ErrBox({ msg, ...props }) {
   if (!msg) return null;
   return (
-    <div style={{
-      background: "#FEF2F2", border: "1.5px solid #FECACA",
-      borderRadius: 10, padding: "12px 16px",
-      color: "var(--danger)", fontSize: ".85rem", fontWeight: 500,
-    }}>
+    <div
+      style={{
+        background: "#FEF2F2", border: "1.5px solid #FECACA",
+        borderRadius: 10, padding: "12px 16px",
+        color: "var(--danger)", fontSize: ".85rem", fontWeight: 500,
+      }}
+      {...props}
+    >
       ⚠️ {msg}
     </div>
   );

@@ -28,15 +28,16 @@ export default function SalarioScreen() {
     <div style={wrap}>
       <PageHeader title="Cálculo de Salário" desc="Calcule o salário líquido e o custo total para o empregador." />
       <Card>
-        <form onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <form data-testid="salario-form"  onSubmit={handleCalc}  style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <Field label="Salário Bruto (R$)">
             <Input
+              data-testid="salario-bruto"
               type="number" step="0.01" min="0" placeholder="ex: 3500.00"
               value={bruto} onChange={e => setBruto(e.target.value)}
             />
           </Field>
-          <Button loading={loading} type="submit">Calcular Salário</Button>
-          <ErrBox msg={erro} />
+          <Button data-testid="salario-submit"  loading={loading} type="submit">Calcular Salário</Button>
+          <ErrBox data-testid="salario-error" msg={erro} />
           <ResultBox data={result} />
         </form>
       </Card>
