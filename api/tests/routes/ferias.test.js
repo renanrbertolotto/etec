@@ -1,11 +1,12 @@
 const request = require('supertest');
 const app     = require('../../src/app');
+const { calcularFerias } = require('../../src/services/feriasService');
 
 describe('Teste do endpoint de cálculo de férias', () => {
     test('Deve retornar 400 quando salário bruto for nulo', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'salarioBruto é obrigatório',
+            erro: 'Salário Bruto é obrigatório',
         };
 
         const payload = {
@@ -18,6 +19,39 @@ describe('Teste do endpoint de cálculo de férias', () => {
         expect(res.body.erro).toStrictEqual(respostaEsperada.erro);
     });
 
+    test('Deve retornar 400 quando salário bruto menor que zero', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Salário Bruto deve ser maior que zero',
+        };
+
+        const payload = {
+            salarioBruto: -1000.0,
+            diasConcedidos: 15,
+        };
+
+        const res = (await request(app).post('/ETEC/ferias').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toStrictEqual(respostaEsperada.erro);
+    });
+
+    test('Deve retornar 400 quando salário bruto igual a zero', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Salário Bruto deve ser maior que zero',
+        };
+
+        const payload = {
+            salarioBruto: 0,
+            diasConcedidos: 15,
+        };
+
+        const res = (await request(app).post('/ETEC/ferias').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toStrictEqual(respostaEsperada.erro);
+    });
+
+
     test('Deve retornar 200 quando dias concedidos for nulo e usar como 30 dias concedidos por padrão', async () => {
         const respostaEsperada = {
             status: 200,
@@ -26,7 +60,7 @@ describe('Teste do endpoint de cálculo de férias', () => {
 
         const payload = {
             salarioBruto: 2000.00,
-            diasConcedidos: null,
+            diasConcedidos: undefined,
         };
 
         const res = (await request(app).post('/ETEC/ferias').send(payload));
@@ -81,4 +115,26 @@ describe('Teste do endpoint de cálculo de férias', () => {
         const res = (await request(app).post('/ETEC/ferias').send(payload));
         expect(res.statusCode).toBe(respostaEsperada.status);
     });
+
+    test('Deve retornar 400 quando o service lançar uma exceção', async () => {
+        const mensagemErro = 'Falha inesperada no cálculo';
+
+        let appComServiceQueLanca;
+        jest.isolateModules(() => {
+            jest.doMock('../../src/services/feriasService', () => ({
+                calcularFerias: () => { throw new Error(mensagemErro); },
+            }));
+            appComServiceQueLanca = require('../../src/app');
+        });
+
+        const payload = {
+            salarioBruto: 4000.00,
+            diasConcedidos: 20,
+        };
+
+        const res = (await request(appComServiceQueLanca).post('/ETEC/ferias').send(payload));
+        expect(res.statusCode).toBe(400);
+        expect(res.body.erro).toStrictEqual(mensagemErro);
+    });
+
 })
