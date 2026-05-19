@@ -5,12 +5,14 @@ describe('Teste do cálculo do décimo terceiro', () => {
         const salario = 4000.0;
         const mes = -1;
         expect(() => calcularDecimoTerceiro(salario, mes)).toThrow('Meses trabalhados deve ser entre 1 e 12');
-    })
+    });
+
     test('Deve retornar erro ao inserir mês 0', () => {
         const salario = 4000.0;
         const mes = 0;
         expect(() => calcularDecimoTerceiro(salario, mes)).toThrow('Meses trabalhados deve ser entre 1 e 12');
-    })
+    });
+
     test('Deve retornar cálculo do décimo terceiro válido ao inserir mês 2', () => {
         const valorEsperado =
             {

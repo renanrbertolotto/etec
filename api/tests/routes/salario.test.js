@@ -5,11 +5,56 @@ describe('Tese do endpoint de cálculo de salário', () => {
     test('Deve retornar 400 quando salário bruto for nulo', async () => {
         const respostaEsperada = {
             status: 400,
-            erro: 'salarioBruto é obrigatório',
+            erro: 'Salário Bruto é obrigatório',
         };
 
         const payload = {
             salarioBruto: null,
+        };
+
+        const res = (await request(app).post('/ETEC/salario').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toBe(respostaEsperada.erro);
+    });
+
+    test('Deve retornar 400 quando salário bruto for uma string não numérica', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Salário Bruto deve ser um número',
+        };
+
+        const payload = {
+            salarioBruto: 'abc',
+        };
+
+        const res = (await request(app).post('/ETEC/salario').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toBe(respostaEsperada.erro);
+    });
+
+    test('Deve retornar 400 quando salário bruto for menor que zero', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Salário Bruto deve ser maior que zero',
+        };
+
+        const payload = {
+            salarioBruto: -1600.00,
+        };
+
+        const res = (await request(app).post('/ETEC/salario').send(payload));
+        expect(res.statusCode).toBe(respostaEsperada.status);
+        expect(res.body.erro).toBe(respostaEsperada.erro);
+    });
+
+    test('Deve retornar 400 quando salário bruto for igual a zero', async () => {
+        const respostaEsperada = {
+            status: 400,
+            erro: 'Salário Bruto deve ser maior que zero',
+        };
+
+        const payload = {
+            salarioBruto: 0,
         };
 
         const res = (await request(app).post('/ETEC/salario').send(payload));
@@ -30,7 +75,6 @@ describe('Tese do endpoint de cálculo de salário', () => {
         const res = (await request(app).post('/ETEC/salario').send(payload));
         expect(res.statusCode).toBe(respostaEsperada.status);
         expect(res.body.erro).toBe(respostaEsperada.erro);
-
     });
 
     test('Deve retornar 200 quando salário bruto for um valor válido', async () => {

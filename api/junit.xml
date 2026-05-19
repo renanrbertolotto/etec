@@ -1,11 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" errors="0" time="1.12">
-  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-18T14:52:15" time="0.193" tests="3">
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" time="0.004">
+<testsuites name="jest tests" tests="67" failures="0" errors="0" time="0.562">
+  <testsuite name="Teste do endpoint de cálculo de férias" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.239" tests="8">
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto for nulo" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto for nulo" time="0.013">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto menor que zero" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto menor que zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto igual a zero" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 200 quando dias concedidos for nulo e usar como 30 dias concedidos por padrão" name="Teste do endpoint de cálculo de férias Deve retornar 200 quando dias concedidos for nulo e usar como 30 dias concedidos por padrão" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 200 quando salário bruto e dias concedidos for um valor válido" name="Teste do endpoint de cálculo de férias Deve retornar 200 quando salário bruto e dias concedidos for um valor válido" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto for uma string" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando salário bruto for uma string" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando meses concedidos for uma string" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando meses concedidos for uma string" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo de férias Deve retornar 400 quando o service lançar uma exceção" name="Teste do endpoint de cálculo de férias Deve retornar 400 quando o service lançar uma exceção" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tese do endpoint de cálculo de salário" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.043" tests="6">
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for nulo" name="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for nulo" time="0.004">
+    </testcase>
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for uma string não numérica" name="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for uma string não numérica" time="0.002">
+    </testcase>
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for menor que zero" name="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for menor que zero" time="0.001">
+    </testcase>
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for igual a zero" name="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for menor que o mínimo" name="Tese do endpoint de cálculo de salário Deve retornar 400 quando salário bruto for menor que o mínimo" time="0.003">
+    </testcase>
+    <testcase classname="Tese do endpoint de cálculo de salário Deve retornar 200 quando salário bruto for um valor válido" name="Tese do endpoint de cálculo de salário Deve retornar 200 quando salário bruto for um valor válido" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.016" tests="3">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês -1" time="0.003">
     </testcase>
     <testcase classname="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" name="Teste do cálculo do décimo terceiro Deve retornar erro ao inserir mês 0" time="0">
     </testcase>
-    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" time="0.001">
+    <testcase classname="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" name="Teste do cálculo do décimo terceiro Deve retornar cálculo do décimo terceiro válido ao inserir mês 2" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do endpoint de cálculo do décimo terceiro" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.054" tests="15">
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for nulo" time="0.003">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for uma string não numérica" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for uma string não numérica" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for igual a zero" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for menor que zero" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto for menor que zero" time="0.002">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que zero" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for igual a zero" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto e meses tralhados for nulo" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando salário bruto e meses tralhados for nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que 1" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for menor que 1" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for uma string não numérica" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for uma string não numérica" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for maior que 12" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for maior que 12" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for 0" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhados for 0" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhador for um número não inteiro" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando meses trabalhador for um número não inteiro" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando o service lançar uma exceção" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 400 quando o service lançar uma exceção" time="0.009">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo do décimo terceiro Deve retornar 200 quando salário bruto e meses trabalhados for um valor válido" name="Teste do endpoint de cálculo do décimo terceiro Deve retornar 200 quando salário bruto e meses trabalhados for um valor válido" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do endpoint de cálculo da rescisão" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.054" tests="18">
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for nulo" time="0.003">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for menor que zero" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for menor que zero" time="0.003">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for igual a zero" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando salário bruto for igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data admissão for nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data admissão for nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for nulo" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando tipo rescisão for nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando tipo rescisão for nulo" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for menor que zero" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for menor que zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for igual a zero" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for igual a zero" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for maior que 31" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando dias trabalhados for maior que 31" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando todos os argumentos forem nulo" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando todos os argumentos forem nulo" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando tipo rescisão for um tipo inválido" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando tipo rescisão for um tipo inválido" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data admissão tiver formato inválido" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data admissão tiver formato inválido" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão tiver formato inválido" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão tiver formato inválido" time="0">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for anterior à data admissão" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for anterior à data admissão" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for igual à data admissão" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando data rescisão for igual à data admissão" time="0.001">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando o service lançar uma exceção" name="Teste do endpoint de cálculo da rescisão Deve retornar 400 quando o service lançar uma exceção" time="0.01">
+    </testcase>
+    <testcase classname="Teste do endpoint de cálculo da rescisão Deve retornar 200 quando todos os dados forem válidos" name="Teste do endpoint de cálculo da rescisão Deve retornar 200 quando todos os dados forem válidos" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste para ver se a API está no ar (Health)" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.028" tests="1">
+    <testcase classname="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" name="Teste para ver se a API está no ar (Health) Deve retornar 200 para a chamada" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do salário" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.013" tests="4">
+    <testcase classname="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" name="Teste do cálculo do salário Deve lançar erro quando o salário for menor que o mínimo" time="0.003">
+    </testcase>
+    <testcase classname="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" name="Teste do cálculo do salário Deve calcular corretamente o salário mínimo de 2026" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" name="Teste do cálculo do salário Deve calcular corretamente um salário de R$ 3.000,00" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo do salário Deve calcular corretamente um salário acima do teto das faixas do INSS" name="Teste do cálculo do salário Deve calcular corretamente um salário acima do teto das faixas do INSS" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo de rescisão" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.011" tests="5">
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for sem justa causa" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for acordo comum" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for pedido de demissão" time="0.001">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" name="Teste do cálculo de rescisão Deve calcular a rescisão quando for com justa causa" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de rescisão Não deve apliar regra de comJustaCausa para tipo desconhecido" name="Teste do cálculo de rescisão Não deve apliar regra de comJustaCausa para tipo desconhecido" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo de férias" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.01" tests="4">
+    <testcase classname="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" name="Teste do cálculo de férias Deve calcular férias de 30 dias como salário cheio + 1/3 constitucional" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" name="Teste do cálculo de férias Deve calcular férias proporcionais de 15 dias como metade do salário" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" name="Teste do cálculo de férias Deve descontar INSS sobre o total bruto (férias + 1/3), não só sobre o valor das férias" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" name="Teste do cálculo de férias Deve isentar IRRF: totalLiquido reflete apenas dedução de INSS e observação informa a isenção" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Teste do cálculo do INSS" errors="0" failures="0" skipped="0" timestamp="2026-05-19T17:20:42" time="0.012" tests="3">
+    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for menor que 0" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" name="Teste do cálculo do INSS Deve retornar 0 quando salário bruto for 0" time="0">
+    </testcase>
+    <testcase classname="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" name="Teste do cálculo do INSS Deve calcular INSS quando salário bruto for um valor válido" time="0">
     </testcase>
   </testsuite>
 </testsuites>

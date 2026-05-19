@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
     }
 
     if (!dataAdmissao) {
-      return res.status(400).json({ erro: 'Data de Admissãp é obrigatória (formato: AAAA-MM-DD)' });
+      return res.status(400).json({ erro: 'Data de Admissão é obrigatória (formato: AAAA-MM-DD)' });
     }
 
     if (!dataRescisao) {
