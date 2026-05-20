@@ -34,7 +34,7 @@ export default function FeriasScreen() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <Field label="Salário Bruto (R$)">
               <Input
-                type="number" step="0.01" min="0" placeholder="ex: 3500.00"
+                type="number" step="0.01" placeholder="ex: 3500.00"
                 value={bruto} onChange={e => setBruto(e.target.value)}
               />
             </Field>

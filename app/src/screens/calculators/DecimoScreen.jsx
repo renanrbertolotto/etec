@@ -36,7 +36,7 @@ export default function DecimoScreen() {
             <Field label="Salário Bruto (R$)">
               <Input
                 data-testid="salario-bruto"
-                type="number" step="0.01" min="0" placeholder="ex: 3500.00"
+                type="number" step="0.01" placeholder="ex: 3500.00"
                 value={bruto} onChange={e => setBruto(e.target.value)}
               />
             </Field>
