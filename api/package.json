@@ -7,7 +7,8 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "jest --coverage --ci --reporters=default --testResultsProcessor=jest-junit",
-    "test:e2e": "for f in tests/e2e/*.test.js; do node \"$f\" || exit 1; done"
+    "test:e2e": "for f in tests/e2e/*.test.js; do node \"$f\" || exit 1; done",
+    "test:e2e:file": "node"
   },
   "jest": {
     "testPathIgnorePatterns": [
