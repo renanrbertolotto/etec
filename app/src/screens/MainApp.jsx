@@ -2,7 +2,7 @@ import { useState } from "react";
 import SalarioScreen    from "./calculators/SalarioScreen";
 import DecimoScreen     from "./calculators/DecimoScreen";
 import FeriasScreen     from "./calculators/FeriasScreen";
-import RecisaoScreen    from "./calculators/RecisaoScreen";
+import RescisaoScreen    from "./calculators/RescisaoScreen";
 import SobreScreen      from "./SobreScreen";
 import HelpScreen       from "./HelpScreen";
 
@@ -10,7 +10,7 @@ const NAV = [
   { id: "salario",  icon: null, label: "Salário" },
   { id: "decimo",   icon: null, label: "13° Salário" },
   { id: "ferias",   icon: null, label: "Férias" },
-  { id: "recisao",  icon: null, label: "Rescisão" },
+  { id: "rescisao",  icon: null, label: "Rescisão" },
   { id: "divider" },
   { id: "sobre",    icon: null, label: "Sobre" },
   { id: "help",     icon: null, label: "Ajuda" },
@@ -23,7 +23,7 @@ export default function MainApp() {
     salario: <SalarioScreen />,
     decimo:  <DecimoScreen />,
     ferias:  <FeriasScreen />,
-    recisao: <RecisaoScreen />,
+    rescisao: <RescisaoScreen />,
     sobre:   <SobreScreen />,
     help:    <HelpScreen />,
   };

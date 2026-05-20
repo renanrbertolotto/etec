@@ -54,7 +54,7 @@ export default function DecimoScreen() {
           </div>
 
           <Button data-testid="decimo-terceiro-submit"  loading={loading} type="submit">Calcular 13°</Button>
-          <ErrBox data-testid="decimo-terceiro-erro"  msg={erro} />
+          <ErrBox data-testid="decimo-terceiro-error"  msg={erro} />
           <ResultBox data={result} />
         </form>
       </Card>

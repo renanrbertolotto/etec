@@ -26,5 +26,5 @@ export const calcDecimo = (salarioBruto, mesesTrabalhados) =>
 export const calcFerias = (salarioBruto, diasConcedidos) =>
   post("ETEC/ferias", { salarioBruto, diasConcedidos });
 
-export const calcRecisao = (salarioBruto, dataAdmissao, dataRescisao, tipoRescisao, diasTrabalhados) =>
+export const calcRescisao = (salarioBruto, dataAdmissao, dataRescisao, tipoRescisao, diasTrabalhados) =>
   post("ETEC/rescisao", { salarioBruto, dataAdmissao, dataRescisao, tipoRescisao, diasTrabalhados });

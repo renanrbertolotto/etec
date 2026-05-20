@@ -29,16 +29,17 @@ export default function FeriasScreen() {
     <div style={wrap}>
       <PageHeader title="Cálculo de Férias" desc="Calcule o valor das férias com abono de 1/3 e descontos legais." />
       <Card>
-        <form onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <form data-testid="ferias-form" onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <Field label="Salário Bruto (R$)">
               <Input
-                type="number" step="0.01" min="0" placeholder="ex: 3500.00"
+                data-testid="salario-bruto" 
+                type="number" step="0.01" min="1621.00" placeholder="ex: 3500.00"
                 value={bruto} onChange={e => setBruto(e.target.value)}
               />
             </Field>
             <Field label="Dias de Férias">
-              <Input type="number" min="10" max="30" placeholder="ex: 30"
+              <Input data-testid="dias-de-ferias" type="number" min="10" max="30" placeholder="ex: 30"
                 value={dias}  onChange={e => setDias(e.target.value)} />
             </Field>
           </div>
@@ -47,9 +48,9 @@ export default function FeriasScreen() {
             O valor inclui automaticamente o adicional de 1/3 constitucional.
           </div>
 
-          <Button loading={loading} type="submit">Calcular Férias</Button>
-          <ErrBox msg={erro} />
-          <ResultBox data={result} />
+          <Button data-testid="ferias-submit" loading={loading} type="submit">Calcular Férias</Button>
+          <ErrBox data-testid="ferias-error" msg={erro} />
+          <ResultBox data-testid="ferias-result" data={result} />
         </form>
       </Card>
     </div>

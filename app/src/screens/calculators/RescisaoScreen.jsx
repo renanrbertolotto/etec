@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { PageHeader, Card, Field, Input, Select, Button, ResultBox, ErrBox, fmt, wrap } from "../../components/ui";
-import { calcRecisao } from "../../services/api";
+import { calcRescisao } from "../../services/api";
 
-export default function RecisaoScreen() {
+export default function RescisaoScreen() {
   const [bruto, setBruto]         = useState("");
   const [admissao, setAdmissao]   = useState("");
   const [rescisao, setRescisao]   = useState("");
@@ -21,7 +21,7 @@ export default function RecisaoScreen() {
     if (!rescisao)     return setErro("Informe a data de rescisão.");
     try {
       setLoading(true);
-      const data = await calcRecisao(b, admissao, rescisao, tipo, parseInt(dias));
+      const data = await calcRescisao(b, admissao, rescisao, tipo, parseInt(dias));
       setResult(formatResult(data));
     } catch (e) {
       setErro(e.message);
@@ -34,29 +34,29 @@ export default function RecisaoScreen() {
     <div style={wrap}>
       <PageHeader title="Rescisão Contratual" desc="Calcule as verbas rescisórias conforme a CLT." />
       <Card>
-        <form onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <form data-testid="rescisao-form" onSubmit={handleCalc} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <Field label="Salário Bruto (R$)">
-              <Input type="number" step="0.01" min="0" placeholder="ex: 3500.00"
+              <Input data-testid="salario-bruto" type="number" step="0.01" min="0" placeholder="ex: 3500.00"
                 value={bruto} onChange={e => setBruto(e.target.value)} />
             </Field>
             <Field label="Dias Trabalhados no Mês">
-              <Input type="number" min="1" max="31" placeholder="ex: 30"
+              <Input data-testid="dias-trabalhados" type="number" min="1" max="31" placeholder="ex: 30"
                 value={dias} onChange={e => setDias(e.target.value)} />
             </Field>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             <Field label="Data de Admissão">
-              <Input type="date" value={admissao} onChange={e => setAdmissao(e.target.value)} />
+              <Input data-testid="data-admissao" type="date" value={admissao} onChange={e => setAdmissao(e.target.value)} />
             </Field>
             <Field label="Data de Rescisão">
-              <Input type="date" value={rescisao} onChange={e => setRescisao(e.target.value)} />
+              <Input data-testid="data-rescisao" type="date" value={rescisao} onChange={e => setRescisao(e.target.value)} />
             </Field>
           </div>
 
           <Field label="Tipo de Rescisão">
-            <Select value={tipo} onChange={e => setTipo(e.target.value)}>
+            <Select data-testid="tipo-rescisao" value={tipo} onChange={e => setTipo(e.target.value)}>
               <option value="semJustaCausa">Demissão sem justa causa</option>
               <option value="comJustaCausa">Demissão com justa causa</option>
               <option value="pedidoDemissao">Pedido de demissão</option>
@@ -64,8 +64,8 @@ export default function RecisaoScreen() {
             </Select>
           </Field>
 
-          <Button loading={loading} type="submit">Calcular Rescisão</Button>
-          <ErrBox msg={erro} />
+          <Button data-testid="rescisao-submit" loading={loading} type="submit">Calcular Rescisão</Button>
+          <ErrBox data-testid="rescisao-error" msg={erro} />
           <ResultBox data={result} />
         </form>
       </Card>
