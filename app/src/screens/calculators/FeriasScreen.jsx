@@ -13,6 +13,7 @@ export default function FeriasScreen() {
     e.preventDefault();
     setErro(""); setResult(null);
     const b = parseFloat(bruto.replace(",", "."));
+    if (!b || b <= 0) return setErro("Informe um salário bruto válido.");
     const d = parseInt(dias);
     try {
       setLoading(true);

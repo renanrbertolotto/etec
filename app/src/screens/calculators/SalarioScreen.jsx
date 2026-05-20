@@ -13,7 +13,8 @@ export default function SalarioScreen() {
     setErro(""); setResult(null);
     const b = parseFloat(bruto.replace(",", "."));
     if (!b || b <= 0) return setErro("Informe um salário bruto válido.");
-    try {
+    if (b < 1621) return setErro("Informe um salário bruto válido.");
+    try {-
       setLoading(true);
       const data = await calcSalario(b);
       setResult(formatResult(data));
@@ -32,7 +33,7 @@ export default function SalarioScreen() {
           <Field label="Salário Bruto (R$)">
             <Input
               data-testid="salario-bruto"
-              type="number" step="0.01" min="0" placeholder="ex: 3500.00"
+              type="number" step="0.01" placeholder="ex: 3500.00"
               value={bruto} onChange={e => setBruto(e.target.value)}
             />
           </Field>
