@@ -97,9 +97,7 @@ async function testaDiasInvalido() {
         5000
     );
     const texto = await erro.getText();
-    // dias não tem validação no front; a API responde 400, mas api.js lê err.message
-    // em vez de err.erro, então o ErrBox mostra só "Erro 400"
-    if (!texto.includes('Erro 400')) {
+    if (!texto.includes('Dias Trabalhados é obrigatório')) {
         throw new Error(`Mensagem inesperada: "${texto}"`);
     }
 

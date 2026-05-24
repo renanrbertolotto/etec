@@ -58,7 +58,7 @@ async function testaSalarioInvalido() {
         5000
     );
     const texto = await erro.getText();
-    if (!texto.includes('Salário inválido')) { // Está retornando erro 400, deveria retornar uma mensagem mais significativa
+    if (!texto.includes('salário bruto válido')) {
         throw new Error(`Mensagem inesperada: "${texto}"`);
     }
 
@@ -75,7 +75,7 @@ async function testaDiasInvalido() {
         5000
     );
     const texto = await erro.getText();
-    if (!texto.includes('entre 1 e 12')) { // Mesmo erro de cima
+    if (!texto.includes('Dias Concedidos deve ser um número entre 10 e 30')) {
         throw new Error(`Mensagem inesperada: "${texto}"`);
     }
 
@@ -107,8 +107,8 @@ async function main() {
         driver = await setupDriver();
         await fazerLogin();
         await abrirFerias();
-        // await testaSalarioInvalido();
-        // await testaDiasInvalido();
+        await testaSalarioInvalido();
+        await testaDiasInvalido();
         await testaFeriasValido();
     } catch (e) {
         console.error('✘ Falha:', e.message);

@@ -12,7 +12,7 @@ async function post(route, body) {
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err.message || `Erro ${res.status}`);
+    throw new Error(err.erro || err.message || `Erro ${res.status}`);
   }
   return res.json();
 }

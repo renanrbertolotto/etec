@@ -7,13 +7,14 @@ async function setupDriver() {
         '--headless=new',
         '--no-sandbox',
         '--disable-dev-shm-usage',
-        '--window-size=800,640',
+        '--window-size=1280,900',
         '--disable-gpu',
     );
     const driver = await new Builder()
         .forBrowser('chrome')
         .setChromeOptions(opts)
         .build();
+    await driver.manage().window().setRect({ width: 1280, height: 900 });
     await driver.manage().setTimeouts({ implicit: 5000, pageLoad: 15000 });
     return driver;
 }
